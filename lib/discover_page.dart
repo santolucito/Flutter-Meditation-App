@@ -36,7 +36,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Discover",
+                  Text("Math Mindfulness",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 34.w,
@@ -68,22 +68,10 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   SizedBox(
                     width: 28.w,
                   ),
-                  CategoryBoxes(
-                    text: "Insomnia",
-                    onPressed: (value) => print(value),
-                  ),
-                  CategoryBoxes(
-                    text: "Depression",
-                    onPressed: (value) => print(value),
-                  ),
-                  CategoryBoxes(
-                    text: "Baby Sleep",
-                    onPressed: (value) => print(value),
-                  ),
-                  CategoryBoxes(
-                    text: "Insomnia",
-                    onPressed: (value) => print(value),
-                  ),
+                  tagSearchButton("Test Anxiety"),
+                  tagSearchButton("Trauma Informed Math"),
+                  tagSearchButton("Algebra"),
+                  tagSearchButton("Precalculus"),
                 ],
               ),
             ),
@@ -118,17 +106,21 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 children: [
-                  SizedBox(width: 28.w),
+                  SizedBox(
+                    width: 28.w,
+                  ),
                   DiscoverCard(
-                    tag: "sleepMeditation",
-                    onTap: onSleepMeditationTapped,
-                    title: "Sleep Meditation",
-                    subtitle: "7 Day Audio and Video Series",
+                    tag: "Math Meditation",
+                    onTap: () => onDetailsTapped("Math Meditation"),
+                    title: "Math Meditation",
+                    subtitle:
+                        "Bring peaceful Mathematical Thinking into your subconcious",
                   ),
                   SizedBox(width: 20.w),
                   DiscoverCard(
-                    onTap: onDepressionHealingTapped,
-                    title: "Depression Healing",
+                    tag: "Algebra Healing",
+                    onTap: () => onDetailsTapped("Algebra Healing"),
+                    title: "Algebra Healing",
                     subtitle: "10 Days Audio and Video Series",
                     gradientStartColor: Color(0xffFC67A7),
                     gradientEndColor: Color(0xffF6815B),
@@ -149,46 +141,21 @@ class _DiscoverPageState extends State<DiscoverPage> {
             ),
             SizedBox(height: 16.h),
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 28.w),
-              child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 19.w, mainAxisExtent:  125.w, mainAxisSpacing: 19.w),
+              padding: EdgeInsets.symmetric(horizontal: 28.w),
+              child: GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 19.w,
+                    mainAxisExtent: 125.w,
+                    mainAxisSpacing: 19.w),
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                  DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Calming Sounds",
-                    gradientStartColor: Color(0xff13DEA0),
-                    gradientEndColor: Color(0xff06B782),
-                  ),
-                  DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Insomnia",
-                    gradientStartColor: Color(0xffFC67A7),
-                    gradientEndColor: Color(0xffF6815B),
-                    icon:    SvgAsset(
-                      assetName: AssetName.tape,
-                      height: 24.w,
-                      width: 24.w,
-                    ),
-                  ),
-                  DiscoverSmallCard(
-                    onTap: (){
-                    },
-                    title: "For Children",
-                    gradientStartColor: Color(0xffFFD541),
-                    gradientEndColor: Color(0xffF0B31A),
-                  ),
-                  DiscoverSmallCard(
-                    onTap: (){},
-                    title: "Tips For Sleeping",
-                    icon:  SvgAsset(
-                      assetName: AssetName.tape,
-                      height: 24.w,
-                      width: 24.w,
-                    ),
-                  ),
+                  smallCard("Math Soundscapes", icons: ["headphones"]),
+                  smallCard("Positive Mindset",
+                      icons: ["headphones", "video_camera_back"]),
+                  smallCard("Affirmations", icons: ["headphones"]),
                 ],
-
               ),
             )
           ],
@@ -197,17 +164,34 @@ class _DiscoverPageState extends State<DiscoverPage> {
     );
   }
 
-
-  void onSeeAllTapped() {
+  DiscoverSmallCard smallCard(String topic, {List<String> icons = const []}) {
+    //automatically generate a color based on the hash of the topic
+    Color color1 = Color(topic.hashCode);
+    Color color2 = Color.alphaBlend(color1, Color.fromARGB(255, 0, 0, 0));
+    return DiscoverSmallCard(
+        onTap: () => onDetailsTapped(topic),
+        title: topic,
+        gradientStartColor: color1,
+        gradientEndColor: color2,
+        icons: icons);
   }
 
-  void onSleepMeditationTapped() {
-    Get.to(()=> DetailPage(), transition: Transition.rightToLeft);
+  CategoryBoxes tagSearchButton(String tag) {
+    return CategoryBoxes(
+      text: tag,
+      onPressed: (value) => filterCards(tag, value),
+    );
   }
 
-  void onDepressionHealingTapped() {
+  void onSeeAllTapped() {}
+
+  void onDetailsTapped(String topic) {
+    Get.to(() => DetailPage(topic: topic), transition: Transition.rightToLeft);
   }
 
-  void onSearchIconTapped() {
-  }
+  void onAlgebraHealingTapped() {}
+
+  void onSearchIconTapped() {}
 }
+
+filterCards(String tag, bool value) {}

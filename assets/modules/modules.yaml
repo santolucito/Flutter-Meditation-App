@@ -1,0 +1,77 @@
+title:
+  "Math Mindfulness"
+modules:
+  -
+    id: "affirmations"
+    topic: "Affirmations"
+    subtitle: "Overcoming Math Anxiety with Positive Affirmations"
+    short_desc: "Boosting Confidence and Persistence through Positive Affirmations"
+    long_desc: "This is a resource for students looking to boost their confidence, motivation, and persistence in their math studies. Through the use of positive affirmations, students can learn to reframe their thinking and approach math with a more positive and growth-oriented mindset.
+
+
+    This resource includes a variety of positive affirmations specifically tailored to the challenges and goals of math students, as well as tips and strategies for incorporating affirmations into your study routine. Whether you're struggling with math anxiety, feeling unmotivated, or simply looking to improve your math performance, this resource can help you to overcome these challenges and achieve your goals.
+
+
+    By using positive affirmations to reframe your thinking and approach math with a positive mindset, you can transform your mathematics learning experience and set yourself up for success in your studies."
+    images: 
+      - "assets/pics/pic1.png"
+      - "assets/pics/pic2.jpg"
+    tags:
+      - "mindfulness"
+  -
+    id: "positivemindset"
+    topic: "Positive Mindset"
+    subtitle: "Setting youself up for success"
+    short_desc: "A positive mindset brings positive changes"
+    long_desc: "Having a positive mindset can be incredibly beneficial when it comes to studying mathematics. When you approach math with a positive attitude, you are more likely to be motivated, persistent, and open to new ideas. This can help you to better engage with the material, ask good questions, and persevere when faced with challenges.
+
+
+    A positive mindset can also help to reduce stress and anxiety, which can interfere with your ability to think clearly and solve problems. By cultivating a positive mindset, you can create a more supportive and productive learning environment for yourself, and be better equipped to tackle even the most challenging math problems.
+
+
+    So, if you want to improve your math study skills, try to cultivate a positive mindset and approach math with confidence, curiosity, and a growth mindset. By doing so, you'll be setting yourself up for success and laying the foundation for a lifetime of learning and problem-solving.
+"
+    images: 
+      - "assets/pics/pic1.png"
+      - "assets/pics/pic2.jpg"
+    tags:
+      - "mindfulness"
+  -
+    id: "mathmeditation"
+    topic: "Math Meditation"
+    subtitle: "Guided Exploraions"
+    short_desc: "Bring peaceful Mathematical Thinking into your subconcious"
+    long_desc: "Meditation is a practice where an individual uses a technique - such as mindfulness, or focusing their mind on a particular object, thought or activity - to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state. Scholars have found meditation difficult to define, as practices vary both between traditions and within them."
+    images: 
+      - "assets/pics/pic1.png"
+      - "assets/pics/pic2.jpg"
+    tags:
+      - "mindfulness"
+  -
+    id: "algebrahealing"
+    topic: "Algebra Healing"
+    subtitle: "Trauma Informed Instruction"
+    short_desc: "School system algebra can be traumatic - let's work on this"
+    long_desc: "Introduction to algebra in school systems can be a traumatic experience. In order to move forward with your mathematics education, it may be necessary to take a step back and work though the your foundational perception of what alegbra means to you from an emotional perspective. Often, students will have been forced into a place a fear, intimidation, and belittement by over-crowded, under-staffed classroom algebra courses. We can overcome this be deconstructing the role that algebra can play in your life."
+    images: 
+      - "assets/pics/pic1.png"
+      - "assets/pics/pic2.jpg"
+    tags:
+      - "trauma informed math"
+  -
+    id: "mathsoundscapes"
+    topic: "Math Soundscapes"
+    subtitle: "Sounds for Studying"
+    short_desc: "Enviromental sounds influence you ability to think clearly"
+    long_desc: "Math Soundscape explores the ways in which the sounds of our environment can impact our ability to learn and think clearly, with a particular focus on the study of math. From the hum of a busy coffee shop to the soothing tones of a meditation app, the sounds around us can have a powerful influence on our cognitive processes.
+
+
+We talk to experts in the fields of psychology, education, and neuroscience to understand how sounds can shape our experiences of learning and problem-solving. We also hear from students, teachers, and professionals about their own experiences with the role of sound in their math studies, and discuss practical strategies for finding the right auditory environment to maximize your learning potential.
+
+
+We will help you improve your focus and concentration and understand the ways in which our surroundings can impact our mathematical thinking. Discover the power of sound in the world of math."
+    images: 
+      - "assets/pics/pic1.png"
+      - "assets/pics/pic2.jpg"
+    tags:
+      - "trauma informed math"

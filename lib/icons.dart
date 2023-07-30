@@ -1,3 +1,10 @@
+import 'package:flutter/material.dart';
+
+Map<String, IconData> iconsMap = {
+  'video_camera_back': Icons.video_camera_back,
+  'headphones': Icons.headphones,
+};
+
 class MeditationSvgAssets {
   static final MeditationSvgAssets _instance = MeditationSvgAssets._internal();
 
@@ -20,7 +27,6 @@ class MeditationSvgAssets {
     AssetName.chart: "assets/icons/chart.svg",
     AssetName.discover: "assets/icons/discover.svg",
     AssetName.profile: "assets/icons/profile.svg",
-
   };
 }
 
@@ -36,6 +42,6 @@ enum AssetName {
   heart,
   chart,
   discover,
-  profile
-
+  profile,
+  pencil
 }

@@ -14,9 +14,9 @@ class DiscoverSmallCard extends StatelessWidget {
   final Widget? vectorBottom;
   final Widget? vectorTop;
   final double? borderRadius;
-  final Widget? icon;
+  List<String>? icons = [];
   final Function()? onTap;
-  const DiscoverSmallCard(
+  DiscoverSmallCard(
       {Key? key,
       this.title,
       this.subtitle,
@@ -27,7 +27,7 @@ class DiscoverSmallCard extends StatelessWidget {
       this.vectorBottom,
       this.vectorTop,
       this.borderRadius,
-      this.icon,
+      this.icons,
       this.onTap})
       : super(key: key);
 
@@ -94,14 +94,13 @@ class DiscoverSmallCard extends StatelessWidget {
                           color: Colors.white),
                     ),
                     Row(
-                      children: [
-                        icon ??
-                            SvgAsset(
-                              assetName: AssetName.headphone,
-                              height: 24.w,
-                              width: 24.w,
-                            ),
-                      ],
+                      children: icons!
+                          .map((iconName) => Icon(
+                                iconsMap[iconName],
+                                color: Colors.white,
+                                size: 28.0,
+                              ))
+                          .toList(),
                     )
                   ],
                 ),
